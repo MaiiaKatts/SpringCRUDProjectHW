@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--тег, который позволяет перебирать список-->
+<head>
+    <meta charset="UTF-8">
+    <title>FULL LIST OF EVENTS</title>
+</head>
+<body>
+    <h2> Event list</h2>
+    <table border="1">
+        <tr>
+            <th>Event name</th>
+            <th>City</th>
+        </tr>
+        <tr th:each="event : ${events}">
+            <td th:utext="${event.name}">...</td>
+            <td th:utext="${event.city}">...</td>
+        </tr>
+    </table>
+<p>Add new event: <a href="/add"> click</a></p>
+</body>
+</html>
