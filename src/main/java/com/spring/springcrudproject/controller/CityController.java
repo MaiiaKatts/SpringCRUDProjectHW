@@ -20,6 +20,6 @@ public class CityController {
         cities.add("Tyumen");
 
         model.addAttribute("cities", cities);
-        return "citiesView";
+        return "cityList";
     }
 }
